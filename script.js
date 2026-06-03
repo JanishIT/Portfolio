@@ -35,21 +35,26 @@ document.getElementById("imageModal");
 const modalImage =
 document.getElementById("modalImage");
 
-function openModal(imageSrc){
-
+window.openModal = function(imageSrc){
+    
     modal.style.display = "flex";
 
     modalImage.src = imageSrc;
 
 }
 
-document
-.querySelector(".close-modal")
-.addEventListener("click",()=>{
+const closeButton =
+document.querySelector(".close-modal");
 
-    modal.style.display="none";
+if(closeButton){
 
-});
+    closeButton.addEventListener("click",()=>{
+
+        modal.style.display="none";
+
+    });
+
+}
 
 modal.addEventListener("click",(e)=>{
 
