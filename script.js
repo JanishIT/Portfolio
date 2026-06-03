@@ -28,3 +28,35 @@ behavior:'smooth'
 });
 
 });
+
+const modal =
+document.getElementById("imageModal");
+
+const modalImage =
+document.getElementById("modalImage");
+
+function openModal(imageSrc){
+
+    modal.style.display = "flex";
+
+    modalImage.src = imageSrc;
+
+}
+
+document
+.querySelector(".close-modal")
+.addEventListener("click",()=>{
+
+    modal.style.display="none";
+
+});
+
+modal.addEventListener("click",(e)=>{
+
+    if(e.target===modal){
+
+        modal.style.display="none";
+
+    }
+
+});
